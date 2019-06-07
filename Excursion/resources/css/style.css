@@ -29,6 +29,8 @@
 
 .mid img {
     margin-bottom: 40px;
+    max-width: 99%;
+    height: auto;
 }
 
 footer h5 {
