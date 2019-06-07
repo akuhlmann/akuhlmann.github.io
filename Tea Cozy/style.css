@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    top: 0px;
+    border-bottom: 1px solid seashell;
+    background-color: black;
+}
+
+header .logo {
+    padding-left: 10px;
+    float: left;
+}
+
+header .logo img {
+    height: 60px;
+    width: auto;
+    margin-top: 10px;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav li {
+    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+}
+
+nav a {
+    vertical-align: bottom;
+    line-height: 1.6;
+    font-size: 1rem;
+    text-decoration: underline;
+    color: seashell;
+}
+
+.main-content {
+    position: relative;
+    top: 69px;
+}
+
+.main-content .banner {
+    background-image: url(resource/img-mission-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content .banner .content {
+    background-color: black;
+    width: 100%;
+}
+
+.main-content .banner .content h2, h4{
+    margin: 0.5rem 0;
+}
+
+.main-content .showcase {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+.main-content .showcase .featured {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.featured .items {
+    margin: 10px;
+}
+
+.featured .items img {
+    width: 300px;
+    height: 200px;
+}
+
+.items h4 {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.locations {
+    background-image: url(resource/img-locations-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.locations h2 {
+    margin: 0;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.locations .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.locations .location {
+    width: 300px;
+    background-color: black;
+    margin: 20px;
+}
+
+.location p {
+    line-height: 2rem;
+}
+
+.contact {
+    height: 200px;
+}
+
+.center h2 {
+    margin-top: 10px;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    top: 69px;
+}
+
+footer .content {
+    padding: 20px;
+    text-align: left;
+}
+
+footer .content span {
+    font-weight: bold;
+}
