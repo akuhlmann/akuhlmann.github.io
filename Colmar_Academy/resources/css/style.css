@@ -10,7 +10,7 @@ html {
 }
 
 body{
-    width: 1400px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0px;
 }
@@ -98,13 +98,15 @@ nav a {
     color: #404040;
 }
 
-.mobile img{
+.mobile{
     display: none;
 }
 
 .main-content {
     background-color: white;
 }
+
+/* Banner-Section */
 
 .banner {
     display: flex;
@@ -134,6 +136,60 @@ nav a {
 .right  a{
     text-decoration: none;
 }
+
+@media only screen and (max-width: 1000px) {
+    .banner { 
+        display: block;
+    }
+
+    .banner .left {
+        width: 100%;
+    }
+
+    .banner .right {
+        width: 100%;
+        position: absolute;
+        top: 250px;
+        text-align: center;
+        color: #aaa;
+    }
+
+    .banner .left img {
+        padding: 0;
+    }
+
+    .banner .right h5 {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .banner {
+        display: inline-grid;
+    }
+
+    .banner .right {
+        width: 100%;
+        position: relative;
+        top: -32px;
+        text-align: center;
+        color: #404040;
+        background-color: #ddd;
+        padding-bottom: 32px;
+    }
+
+    .banner .left img {
+        padding: 0;
+    }
+
+    .banner .right h5 {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* Info-Section */
 
 .info {
     display: flex;
@@ -195,10 +251,6 @@ nav a {
     transition: 0.2s linear all;
 }
 
-.info .right .mobile {
-    display: none;
-}
-
 .border-top {
     border-top: 1px solid #eee;
     padding-top: 16px;
@@ -207,6 +259,51 @@ nav a {
 .border-bottom {
     border-bottom: 1px solid #eee;
 }
+
+@media only screen and (max-width: 900px) {
+    .info .left {
+        display: none;
+    }
+
+    .info .right {
+        width: 100%;
+    }
+
+    .info-item {
+        display: block;
+        padding: 0 24px;
+        transition: none;
+    }
+
+    .info-item:hover {
+        background-color: white;
+        transition: none;
+    }
+
+    .info-item .desktop{
+        display: none;
+    }
+
+    .info-item .mobile{
+        display: block;
+    }
+
+    .info .right img {
+        width: 100%;
+        padding-bottom: 24px;
+    }
+
+    .border-top {
+        border-top: none;
+        padding-top: 16px;
+    }
+    
+    .border-bottom {
+        border-bottom: none;
+    }
+}
+
+/* Courses-Section */
 
 .lerning {
     background-color: #ddd;
@@ -248,6 +345,47 @@ nav a {
     width: 100%;
     height: auto;
 }
+
+@media only screen and (max-width: 1100px) {
+    .lerning {
+        padding: 32px;
+    }
+
+    .courses { 
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .lerning {
+        padding-top: 64px;
+        background-color: white;
+    }
+
+    .courses { 
+        grid-template: repeat(6, 1fr) / repeat(1, 1fr);
+        grid-gap: 8px;
+    }
+
+    .course-item img {
+        display: none;
+    }
+
+    .course-item p {
+        display: none;
+    }
+
+    .course-item {
+        padding: 10px;
+        background-color: #ddd;
+    }
+
+    .course-item h2 {
+        margin: 0;
+    }
+}
+
+/* Thesis-Section */
 
 #thesis-head {
     text-align: center;
@@ -297,7 +435,21 @@ nav a {
     padding: 0 24px;
 }
 
-footer{
+@media only screen and (max-width: 1100px) {
+    .thesis {
+        display: block;
+    }
+
+    .thesis-item {
+        display: none;
+    }
+
+    .thesis .left {
+        width: 100%;
+    }
+}
+
+footer {
     background-color: white;
     padding: 16px 24px;
     border-top: 1px solid #eee;
@@ -327,4 +479,20 @@ footer .right p{
 
 footer .right p:hover{
     color: #404040;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        height: 52px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    footer {
+        border-top: none;
+    }
+
+    footer .right {
+        display: none;
+    }
 }
